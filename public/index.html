@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+    <style>
+      body {
+        background-color: #eee;
+      }
+      * {
+        font-family: "DM Sans", sans-serif;
+      }
+      .w-100 {
+        width: 60vh !important;
+        max-height: 50vh !important;
+      }
+      .caption {
+        flex-direction: column;
+      }
+      .h-100-2 {
+        height: 80% !important;
+      }
+      .quote-info {
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.2); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .carousel-img {
+        width: 100% !important;
+        filter: blur(5px) !important;
+      }
+      .card-container {
+        /* margin-top: 50px !important; */
+        padding: 20px;
+        max-height: 60vh;
+        background-color: #fff;
+        max-width: 100% !important;
+      }
+      .single-quote {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px !important;
+        margin-bottom: 12px;
+        max-width: 60%;
+      }
+
+      .quote-heart {
+        background-color: transparent !important;
+        border: 0 !important;
+      }
+      a {
+        color: #000 !important;
+      }
+
+      body::-webkit-scrollbar {
+        width: 12px; /* width of the entire scrollbar */
+      }
+
+      body::-webkit-scrollbar-track {
+        background: #eee; /* color of the tracking area */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: rgba(
+          68,
+          68,
+          68,
+          0.514
+        ); /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        border: 1px solid #eee; /* creates padding around scroll thumb */
+      }
+      .advice-search {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        max-width: 50%;
+        border-radius: 15px !important;
+      }
+      .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .avatar {
+        height: 3rem;
+        border: #eee solid;
+        border-radius: 10px !important;
+      }
+
+      .icon-title {
+        display: flex;
+        flex-direction: row;
+        padding-top: 12px;
+      }
+      .App {
+        background-color: rgb(248, 248, 248);
+      }
+      hr {
+        width: 0 !important;
+      }
+      .welcome {
+        background-color: #fff;
+      }
+      .welcome-container {
+        padding: 50px !important;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+      }
+      .btn-primary.focus,
+      .btn-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgb(255, 79, 90, 0.5) !important;
+      }
+
+      .spacer {
+        height: 2rem;
+        width: 100%;
+        background-color: #eee;
+      }
+
+      .back-icon {
+        font-size: 25px;
+        margin-right: 18px;
+      }
+      @media (max-width: 575.98px) {
+        .App {
+          background-color: rgb(248, 248, 248);
+        }
+        .title {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 20px;
+          background-color: #fff;
+        }
+        .container-carousel {
+          padding: 0 !important;
+        }
+        .quote-text {
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .author-text {
+          font-size: 15px;
+        }
+        .carousel-img {
+          height: 30vh !important;
+          width: 100% !important;
+          filter: blur(5px) !important;
+        }
+        .single-quote-text {
+          font-size: 15px;
+        }
+        .single-quote {
+          border-radius: 20px !important;
+          margin-bottom: 12px;
+          max-width: 100%;
+        }
+        .advice-search {
+          max-width: 90%;
+        }
+        .avatar {
+          height: 3rem;
+          border: #eee solid;
+          border-radius: 10px !important;
+        }
+        .back-icon {
+          font-size: 25px;
+          margin-right: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
